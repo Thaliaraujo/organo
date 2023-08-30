@@ -10,7 +10,7 @@ function App() {
     {
       nome: 'Programação',
       corPrimaria: '#D9F7E9',
-      corSecundaria: '#57C278'
+      corSecundaria: '#57C277'
     },
     {
       nome: 'Front-End',

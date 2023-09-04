@@ -10,8 +10,16 @@ const Time = ({ time, colaboradores, aoDeletar, mudarCor }) => {
             <h3 style={{ borderColor: time.cor }}>{time.nome}</h3>
             <div className='colaboradores'>
                 {colaboradores.map((colaborador, indice) => {
-                    return  <Colaborador key={indice} colaborador={colaborador} corDeFundo={time.cor} aoDeletar={aoDeletar}/>
-                } )};
+                    return ( 
+                        <Colaborador 
+                            key={indice} 
+                            colaborador={colaborador} 
+                            corDeFundo={time.cor} 
+                            aoDeletar={aoDeletar}
+                            aofavoritar={aofavoritar}
+                        />
+                    );
+                })};
             </div>
         </section>
     );

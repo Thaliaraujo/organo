@@ -4,7 +4,6 @@ import Formulario from "./componentes/Formulario";
 import Rodape from "./componentes/Rodape";
 import Time from "./componentes/Time";
 import { v4 as uuidv4 } from 'uuid';
-import Colaborador from "./componentes/Colaborador";
 
 function App() {
 
@@ -262,14 +261,18 @@ function App() {
   function resolverFavorito(id) {
     setColaboradores(colaboradores.map(Colaborador => {
       if(Colaborador.id === id) Colaborador.favorito = !Colaborador.favorito;
-      return Colaborador
+      return Colaborador;
     }));
   };
 
   return (
     <div>
       <Banner />
-      <Formulario aoCriarTime={cadastrarTime} times={times.map(time => time.nome)} aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} />
+      <Formulario 
+        aoCriarTime={cadastrarTime} 
+        times={times.map(time => time.nome)} 
+        aoCadastrar={colaborador => setColaboradores([...colaboradores, colaborador])} 
+      />
       <section className="times">
         <h1>Minha organização</h1>
         {times.map((time, indice) => 
